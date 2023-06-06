@@ -17,3 +17,9 @@
   .ancho {
     width: 80%;
   }
+
+  .custom-button {
+    width: 80%;
+    margin: 10px;
+  }
+  
