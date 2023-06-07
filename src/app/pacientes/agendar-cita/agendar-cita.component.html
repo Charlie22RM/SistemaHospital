@@ -11,6 +11,13 @@
           </mat-select>
         </mat-form-field>
         <mat-form-field class="ancho"  appearance="fill">
+          <mat-label>Seleccione una fecha</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="ancho"  appearance="fill">
           <mat-label>Seleccione un horario</mat-label>
           <mat-select>
             <mat-option *ngFor="let horario of horarios" [value]="horario.value">

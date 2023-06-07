@@ -8,7 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { AgendarCitaModule } from './agendar-cita/agendar-cita.module';
-
+import { CitaAgendadaModule } from './cita-agendada/cita-agendada.module';
 
 @NgModule({
   declarations: [
