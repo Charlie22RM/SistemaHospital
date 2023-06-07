@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const myModules=[
   CommonModule,
@@ -43,6 +44,7 @@ const myModules=[
   MatButtonModule,
   MatSelectModule,
   MatFormFieldModule,
+  MatSnackBarModule
 ]
 
 @NgModule({
