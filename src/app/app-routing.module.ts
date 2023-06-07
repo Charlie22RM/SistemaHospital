@@ -9,8 +9,7 @@ const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'pacientes', loadChildren: () => import('./pacientes/pacientes.module').then(x => x.PacientesModule) },
-    { path: 'agendar-cita', loadChildren: () => import('./agendar-cita/agendar-cita.module').then(x => x.AgendarCitaModule) }
+    { path: 'pacientes', loadChildren: () => import('./pacientes/pacientes.module').then(x => x.PacientesModule) }
 
 ];
 
