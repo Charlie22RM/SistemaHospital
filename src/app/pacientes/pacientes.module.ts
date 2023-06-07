@@ -4,6 +4,10 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
 import { PacientesComponent } from './pacientes.component';
 import { PacientesRoutingModule } from './pacientes.routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { AgendarCitaModule } from './agendar-cita/agendar-cita.module';
 
 
 @NgModule({
@@ -14,7 +18,13 @@ import { NavbarComponent } from './navbar/navbar.component';
   imports: [
     CommonModule,
     AngularMaterialModule,
-    PacientesRoutingModule
+    PacientesRoutingModule,
+    AngularMaterialModule,
+    AgendarCitaModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
 
   ]
 })
