@@ -9,6 +9,9 @@ import { AngularMaterialModule } from './angular-material/angular-material.modul
 import { RegisterModule } from './register/register.module';
 import { LoginModule } from './login/login.module';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent
