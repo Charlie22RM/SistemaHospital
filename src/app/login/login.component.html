@@ -14,10 +14,6 @@
         >
           Ingrese un email valido
         </mat-error>
-      
-      <mat-error *ngIf="userErrorMessage !==null">
-        prueba
-      </mat-error>
         <mat-error *ngIf="validateFrm.get('email')?.hasError('required')">
           El Email es <strong>requerido</strong>
         </mat-error>
