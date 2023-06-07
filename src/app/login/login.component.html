@@ -25,9 +25,6 @@
         <mat-error *ngIf="validateFrm.get('password')?.hasError('required')">
           La contraseña es <strong>requerido</strong>
         </mat-error>
-        <mat-error *ngIf="passwordErrorMessage">
-          La contraseña es incorrecta
-        </mat-error>
       </mat-form-field>
 
       <button

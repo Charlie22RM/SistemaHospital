@@ -10,7 +10,7 @@
 .login {
   width: 100%;
   max-width: 330px;
-  padding: 15px;
+  padding: 3px;
   margin: auto;
   text-align: center;
 }
@@ -61,6 +61,10 @@
   margin-left: 25px; /* Ajusta el valor según tus necesidades */
 }
 
+.margin-bottom{
+  margin-bottom: 10px; /* Ajusta el valor según tus necesidades */
+}
+
 .login h1 {
   font-family: Arial, sans-serif; /* Cambia la fuente a tu preferencia */
   font-size: 24px; /* Cambia el tamaño de la fuente según tus necesidades */
@@ -78,4 +82,12 @@
 
 .custom-button {
   width: 150px; /* Ajusta el ancho del botón según tus necesidades */
+}
+
+.mat-form-field.ancho {
+  margin-bottom: 20px; /* Ajusta el valor según tus necesidades */
+}
+
+.mat-form-field.mat-form-field-invalid.mat-form-field-can-float .mat-form-field-wrapper .mat-form-field-flex mat-error {
+  margin-top: 10px; /* Ajusta el valor según tus necesidades */
 }

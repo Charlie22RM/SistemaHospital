@@ -22,6 +22,7 @@ export class AuthService {
 
   register(user:User){
     let url = `${environment.apiUrl}auth/register`;
+    user.rol=1;
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
