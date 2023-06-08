@@ -9,7 +9,8 @@ const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full'},
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'pacientes', loadChildren: () => import('./pacientes/pacientes.module').then(x => x.PacientesModule) }
+    { path: 'pacientes', loadChildren: () => import('./pacientes/pacientes.module').then(x => x.PacientesModule) },
+    { path: 'medicos', loadChildren: () => import('./medicos/medicos.module').then(x => x.MedicosModule) }
 
 ];
 
