@@ -7,7 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import { ListarConsultoriosCitaModule } from './listar-consultorios/listar-consultorios.module';
+import { ListarConsultoriosModule } from './listar-consultorios/listar-consultorios.module';
 
 
 
@@ -19,7 +19,7 @@ import { ListarConsultoriosCitaModule } from './listar-consultorios/listar-consu
     AngularMaterialModule,
     AdministradorRoutingModule,
     AngularMaterialModule,
-    ListarConsultoriosCitaModule,
+    ListarConsultoriosModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
