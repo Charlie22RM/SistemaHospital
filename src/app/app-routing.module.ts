@@ -5,11 +5,13 @@ import { RegisterComponent } from './register/register.component';
 
 
 
+
 const routes: Routes = [
     { path: '', redirectTo: 'login', pathMatch: 'full'},
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'pacientes', loadChildren: () => import('./pacientes/pacientes.module').then(x => x.PacientesModule) }
+    { path: 'pacientes', loadChildren: () => import('./pacientes/pacientes.module').then(x => x.PacientesModule) },
+    { path: 'administrador', loadChildren: () => import('./administrador/administrador.module').then(x => x.AdministradorModule) },
 
 ];
 
