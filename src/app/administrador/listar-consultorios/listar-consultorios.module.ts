@@ -13,4 +13,6 @@ import { AngularMaterialModule } from "src/app/angular-material/angular-material
     AngularMaterialModule
   ],
 })
-export class ListarConsultoriosModule {}
+export class ListarConsultoriosModule {
+  
+}

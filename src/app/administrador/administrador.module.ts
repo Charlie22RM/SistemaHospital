@@ -18,7 +18,6 @@ import { ListarConsultoriosModule } from './listar-consultorios/listar-consultor
     CommonModule,
     AngularMaterialModule,
     AdministradorRoutingModule,
-    AngularMaterialModule,
     ListarConsultoriosModule,
     FormsModule,
     MatFormFieldModule,
