@@ -7,3 +7,14 @@ table {
     font-size: 14px;
     width: 100%;
   }
+
+  .filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  .add-button {
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }

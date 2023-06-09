@@ -1,8 +1,14 @@
-<mat-form-field>
+<div class="filter-container">
+  <mat-form-field>
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input>
   </mat-form-field>
-  
+
+  <button mat-raised-button color="primary" class="add-button" (click)="addConsultorio()">
+    <mat-icon>add</mat-icon>
+    Agregar consultorio
+  </button>
+</div>
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   
     <!-- Position Column -->

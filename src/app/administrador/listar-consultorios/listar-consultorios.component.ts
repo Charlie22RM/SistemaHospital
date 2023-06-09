@@ -38,4 +38,8 @@ export class ListarConsultoriosComponent {
       consultorio_id,
     ]);
   }
+
+  addConsultorio(){
+    this.router.navigate(['administrador/agregar-consultorio']);
+  }
 }

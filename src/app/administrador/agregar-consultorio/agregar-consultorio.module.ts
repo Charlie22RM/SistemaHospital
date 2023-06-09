@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EditarConsultorioComponent } from './editar-consultorio.component';
-import {  ReactiveFormsModule } from '@angular/forms';
+import { AgregarConsultorioComponent } from './agregar-consultorio.component';
 import { AngularMaterialModule } from 'src/app/angular-material/angular-material.module';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
-  declarations: [EditarConsultorioComponent],
+  declarations: [
+    AgregarConsultorioComponent
+  ],
   imports: [
     CommonModule,
     AngularMaterialModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ]
 })
-export class EditarConsultorioModule { }
+export class AgregarConsultorioModule { }
