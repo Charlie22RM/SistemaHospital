@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { ListarConsultoriosModule } from './listar-consultorios/listar-consultorios.module';
+import { EditarConsultorioModule } from './editar-consultorio/editar-consultorio.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { ListarConsultoriosModule } from './listar-consultorios/listar-consultor
     AngularMaterialModule,
     AdministradorRoutingModule,
     ListarConsultoriosModule,
+    EditarConsultorioModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
