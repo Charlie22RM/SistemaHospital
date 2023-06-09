@@ -10,8 +10,6 @@ import { MatInputModule } from '@angular/material/input';
 import { ListarConsultoriosCitaModule } from './listar-consultorios/listar-consultorios.module';
 
 
-
-
 @NgModule({
   declarations: [AdministradorComponent, NavbarComponent],
   imports: [

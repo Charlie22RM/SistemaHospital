@@ -1,1 +1,132 @@
-<p>historial-clinico works!</p>
+<h1 class="titulo">Historial Clínico</h1>
+<div class="example-form">
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellido</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+</div>
+<div class="example-form">
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Edad</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Altura</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+</div>
+<div class="example-form">
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Peso</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Masa Corporal</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+</div>
+<div class="example-form">
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Temperatura</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Frecuencia Respiratoria</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+</div>
+<div class="example-form">
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Presión Arterial</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+    <div class="example-field">
+        <mat-form-field class="example-full-width">
+            <mat-label>Frecuencia Cardíaca</mat-label>
+            <input matInput>
+        </mat-form-field>
+    </div>
+</div>
+
+<h3 class="titulo2">¿Has sufrido alguna de estas enfermedades?</h3>
+
+<div class="mensaje-container">
+    <div class="radiobutton-container">
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+            [(ngModel)]="tipoEnfermedades">
+            <mat-radio-button class="example-radio-button" *ngFor="let enfermedad of enfermedades"
+                [value]="enfermedades">
+                {{enfermedad}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <div class="mensaje-input-container">
+        <div class="textbox-container">
+            <input type="text" class="textbox1" placeholder="Escribe aquí...">
+        </div>
+        <div class="textbox-container">
+            <input type="text" class="textbox" placeholder="Escribe aquí...">
+        </div>
+        <div class="textbox-container">
+            <input type="text" class="textbox" placeholder="Escribe aquí...">
+        </div>
+        <div class="textbox-container">
+            <input type="text" class="textbox" placeholder="Escribe aquí...">
+        </div>
+        <div class="textbox-container">
+            <input type="text" class="textbox" placeholder="Escribe aquí...">
+        </div>
+        <div class="textbox-container">
+            <input type="text" class="textbox" placeholder="Escribe aquí...">
+        </div>
+        <div class="textbox-container">
+            <input type="text" class="textbox" placeholder="Escribe aquí...">
+        </div>
+    </div>
+</div>
+
+<h3 class="titulo2">Diagnóstico</h3>
+<div class="container">
+    <form class="example-form2">
+        <mat-form-field class="example2">
+            <mat-label></mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+    </form>
+</div>
+
+<h3 class="titulo2">Medicamentos</h3>
+
+<div class="container">
+    <form class="example-form2">
+        <mat-form-field class="example2">
+            <mat-label></mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+    </form>
+</div>
+
+<button class="custom-button" mat-raised-button mat-button color="primary">Guardar</button>
