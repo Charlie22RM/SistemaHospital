@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../environments/environments';
-import { User } from '../models/user';
+import { UserCreation } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,7 @@ export class AuthService {
     return this.http.post<any>(url,paramsData,options);
   }
 
-  register(user:User){
+  register(user:UserCreation){
     let url = `${environment.apiUrl}auth/register`;
     user.rol=1;
     let headers = new HttpHeaders({
