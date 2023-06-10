@@ -1,7 +1,7 @@
 <p>editar-consultorio works!</p>
 <div class="body">
   <div class="login">
-    <form [formGroup]="validateFrm">
+    <form [formGroup]="validateFrm" (ngSubmit)="submitForm()">
       <div class="">
         <mat-form-field class="ancho margin-bottom" appearance="fill">
           <mat-label>Especialidad</mat-label>
@@ -12,11 +12,17 @@
             La especialidad es requerida
           </mat-error>
         </mat-form-field>
-        <select matNativeControl>
-          <option value="">Seleccionar especialidad</option>
-          <option value="opcion1">Opción 1</option>
-          <option value="opcion2">Opción 2</option>
-        </select>
+        <mat-form-field>
+          <mat-label>Seleccionar medico</mat-label>
+          <mat-select formControlName="medico_id">
+            <mat-option *ngFor="let opcion of opcionesMedicos" [value]="opcion.id">
+              {{ opcion.label }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="validateFrm.get('medico_id')?.hasError('required')">
+            La especialidad es requerida
+          </mat-error>
+        </mat-form-field>
       </div>
       <div class="button-row">
         <button
