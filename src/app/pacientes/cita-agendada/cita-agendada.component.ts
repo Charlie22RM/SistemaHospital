@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
-export interface PeriodicElement {
+export interface CitaAgendada {
   turno: number;
   consultorio: string;
   fecha: Date;
   horario: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
+const ELEMENT_DATA: CitaAgendada[] = [
 
 ];
 
