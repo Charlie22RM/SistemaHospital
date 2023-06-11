@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ListarConsultoriosModule } from './listar-consultorios/listar-consultorios.module';
 import { EditarConsultorioModule } from './editar-consultorio/editar-consultorio.module';
 import { AgregarConsultorioModule } from './agregar-consultorio/agregar-consultorio.module';
+import { ListarMedicosModule } from './listar-medicos/listar-medicos.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AgregarConsultorioModule } from './agregar-consultorio/agregar-consulto
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    AgregarConsultorioModule
+    AgregarConsultorioModule,
+    ListarMedicosModule
   ]
 })
 export class AdministradorModule { }

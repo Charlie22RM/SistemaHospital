@@ -19,4 +19,12 @@ export class MedicoService {
     return lastValueFrom(this.http.get<any>(url, options));
   }
 
+  public getAll(){
+    let url = `${environment.apiUrl}medicos`;
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    let options = { headers };
+    return this.http.get<any>(url, options);
+  }
 }
