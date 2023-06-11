@@ -1,83 +1,3 @@
-/* .titulo {
-  font-family: Arial, sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #3f51b5;
-  margin-bottom: 20px;
-  text-align: center;
-  padding-top: 20px;
-}
-
-.titulo2 {
-  font-family: Arial, sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  text-align: center;
-  padding-top: 10px;
-}
-
-.example-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.example-field {
-  margin: 5px;
-  text-align: center;
-}
-
-.example-form .example-full-width {
-  width: 250px;
-  max-width: 100%;
-}
-
-.example-radio-group {
-  display: flex;
-  flex-direction: column;
-  margin: 15px 0;
-  align-items: flex-start;
-}
-
-.example-radio-button {
-  margin: 5px;
-}
-
-.example-form1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.example-field1 {
-  margin: 5px;
-  text-align: center;
-}
-
-.mensaje-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 20px;
-}
-
-.radiobutton-container {
-  margin-right: 20px;
-}
-
-.mensaje-input-container {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.mensaje-input {
-  margin: 5px;
-  width: 200px;
-} */
-
 .titulo {
   font-family: Arial, sans-serif;
   font-size: 24px;
@@ -113,6 +33,7 @@
   width: 250px;
   max-width: 100%;
 }
+
 
 .example-radio-group {
   display: flex;
@@ -220,4 +141,13 @@
   width: 15%;
   margin: 20px auto;
   display: block;
+}
+
+
+.example-section {
+  margin: 12px 0;
+}
+
+.example-section{
+  margin-right: 15px;
 }
