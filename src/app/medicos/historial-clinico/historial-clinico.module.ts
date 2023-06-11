@@ -6,6 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { AngularMaterialModule } from 'src/app/angular-material/angular-material.module';
 import { HistorialClinicoComponent } from './historial-clinico.component';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 
 
@@ -22,7 +23,8 @@ import {MatRadioModule} from '@angular/material/radio';
     MatRadioModule,
     MatFormFieldModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule
   ]
 })
 export class HistorialClinicoModule { }
