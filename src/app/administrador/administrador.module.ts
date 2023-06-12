@@ -11,6 +11,8 @@ import { ListarConsultoriosModule } from './listar-consultorios/listar-consultor
 import { EditarConsultorioModule } from './editar-consultorio/editar-consultorio.module';
 import { AgregarConsultorioModule } from './agregar-consultorio/agregar-consultorio.module';
 import { ListarMedicosModule } from './listar-medicos/listar-medicos.module';
+import { AgregarMedicoModule } from './agregar-medico/agregar-medico.module';
+
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { ListarMedicosModule } from './listar-medicos/listar-medicos.module';
     MatInputModule,
     ReactiveFormsModule,
     AgregarConsultorioModule,
-    ListarMedicosModule
+    ListarMedicosModule,
+    AgregarMedicoModule
   ]
 })
 export class AdministradorModule { }
