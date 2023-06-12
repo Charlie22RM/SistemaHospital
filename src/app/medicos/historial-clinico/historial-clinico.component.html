@@ -73,15 +73,14 @@
 <h3 class="titulo2">¿Has sufrido alguna de estas enfermedades?</h3>
 
 <div class="mensaje-container">
-    <div class="radiobutton-container"
-         class="example-section" [formGroup]="toppings">
-            <p><mat-checkbox formControlName="diabetes">Diabetes</mat-checkbox></p>
-            <p><mat-checkbox formControlName="enf_tiroideas">Enfermedades Tiroideas</mat-checkbox></p>
-            <p><mat-checkbox formControlName="hip_arterial">Hipertensión Arterial</mat-checkbox></p>
-            <p><mat-checkbox formControlName="cardiopatias">Cardiopatías</mat-checkbox></p>
-            <p><mat-checkbox formControlName="traumatismos">Traumatismos</mat-checkbox></p>
-            <p><mat-checkbox formControlName="cancer">Cancer</mat-checkbox></p>
-            <p><mat-checkbox formControlName="otros">Otros</mat-checkbox></p>
+    <div class="radiobutton-container" class="example-section" [formGroup]="enfermedades">
+        <p><mat-checkbox formControlName="diabetes">Diabetes</mat-checkbox></p>
+        <p><mat-checkbox formControlName="enf_tiroideas">Enfermedades Tiroideas</mat-checkbox></p>
+        <p><mat-checkbox formControlName="hip_arterial">Hipertensión Arterial</mat-checkbox></p>
+        <p><mat-checkbox formControlName="cardiopatias">Cardiopatías</mat-checkbox></p>
+        <p><mat-checkbox formControlName="traumatismos">Traumatismos</mat-checkbox></p>
+        <p><mat-checkbox formControlName="cancer">Cancer</mat-checkbox></p>
+        <p><mat-checkbox formControlName="otros">Otros</mat-checkbox></p>
     </div>
 
     <div class="mensaje-input-container">
