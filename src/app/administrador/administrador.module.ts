@@ -12,6 +12,7 @@ import { EditarConsultorioModule } from './editar-consultorio/editar-consultorio
 import { AgregarConsultorioModule } from './agregar-consultorio/agregar-consultorio.module';
 import { ListarMedicosModule } from './listar-medicos/listar-medicos.module';
 import { AgregarMedicoModule } from './agregar-medico/agregar-medico.module';
+import { EditarMedicoModule } from './editar-medico/editar-medico.module';
 
 
 
@@ -29,7 +30,8 @@ import { AgregarMedicoModule } from './agregar-medico/agregar-medico.module';
     ReactiveFormsModule,
     AgregarConsultorioModule,
     ListarMedicosModule,
-    AgregarMedicoModule
+    AgregarMedicoModule,
+    EditarMedicoModule
   ]
 })
 export class AdministradorModule { }

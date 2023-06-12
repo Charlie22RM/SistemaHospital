@@ -6,6 +6,7 @@ import { EditarConsultorioComponent } from './editar-consultorio/editar-consulto
 import { AgregarConsultorioComponent } from './agregar-consultorio/agregar-consultorio.component';
 import { ListarMedicosComponent } from './listar-medicos/listar-medicos.component';
 import { AgregarMedicoComponent } from './agregar-medico/agregar-medico.component';
+import { EditarMedicoComponent } from './editar-medico/editar-medico.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'agregar-consultorio', component: AgregarConsultorioComponent },
       { path: 'listar-medicos', component: ListarMedicosComponent },
       { path: 'agregar-medico', component: AgregarMedicoComponent },
+      { path: 'editar-medico', component: EditarMedicoComponent },
     ],
   },
 ];

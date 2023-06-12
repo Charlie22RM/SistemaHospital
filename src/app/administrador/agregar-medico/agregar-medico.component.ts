@@ -45,6 +45,6 @@ export class AgregarMedicoComponent implements OnInit{
   
 
   regresar() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/administrador/listar-medicos']);
   }
 }
