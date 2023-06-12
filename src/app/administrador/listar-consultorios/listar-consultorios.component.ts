@@ -19,7 +19,7 @@ export class ListarConsultoriosComponent implements OnInit {
     'apellido_medico',
     'actions',
   ];
-  dataSource= new MatTableDataSource<Consultorio>();;
+  dataSource= new MatTableDataSource<Consultorio>();
   filterValue: string = '';
   constructor(
     private router: Router,

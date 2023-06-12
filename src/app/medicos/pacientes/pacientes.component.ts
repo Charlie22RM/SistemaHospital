@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { PacienteDisplay } from 'src/app/models/paciente';
+import { PacientesService } from 'src/app/services/pacientes.service';
 
 export interface DatosPacientes{
   id:number,
@@ -9,18 +12,16 @@ export interface DatosPacientes{
   direccion: string;
 }
 
-const ELEMENT_DATA: DatosPacientes[] = [
-  {id:1,email:"prueba",nombre:"al",apellido:"casas",direccion:"su casa"},
-];
 @Component({
   selector: 'app-pacientes',
   templateUrl: './pacientes.component.html',
   styleUrls: ['./pacientes.component.css']
 })
-export class PacientesComponent {
-
+export class PacientesComponent implements OnInit{
+  data!: PacienteDisplay[];
   constructor(
     private router: Router,
+    private pacienteService: PacientesService
     ){}
   displayedColumns: string[] = [
     'id',
@@ -30,8 +31,19 @@ export class PacientesComponent {
     'direccion',
     'actions',
   ];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource<PacienteDisplay>();
 
+  ngOnInit(): void {
+    this.pacienteService.getAll().subscribe(
+      {
+        next: async (res)=>{
+          console.log(res);
+          this.data=res;
+          this.dataSource = new MatTableDataSource(this.data);
+        }
+      }
+    );
+  }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
