@@ -10,7 +10,7 @@ import { EditarMedicoComponent } from './editar-medico/editar-medico.component';
 import { ListarPacientesComponent } from './listar-pacientes/listar-pacientes.component';
 import { AgregarPacienteComponent } from './agregar-paciente/agregar-paciente.component';
 import { EditarPacienteComponent } from './editar-paciente/editar-paciente.component';
-
+import { ConsultasExternasComponent } from './consultas-externas/consultas-externas.component';
 const routes: Routes = [
   {
     path: '',
@@ -28,6 +28,7 @@ const routes: Routes = [
       { path: 'listar-pacientes', component: ListarPacientesComponent },
       { path: 'agregar-paciente', component: AgregarPacienteComponent },
       { path: 'editar-paciente', component: EditarPacienteComponent },
+      { path: 'consultas-externas', component: ConsultasExternasComponent },
       
     ],
   },
