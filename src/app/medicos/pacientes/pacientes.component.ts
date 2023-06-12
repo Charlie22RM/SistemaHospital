@@ -39,6 +39,8 @@ export class PacientesComponent {
   }
 
   editElement(){
-    this.router.navigate(['asd']);
+    this.router.navigate(['/medicos/historial']);
   }
 }
+
+

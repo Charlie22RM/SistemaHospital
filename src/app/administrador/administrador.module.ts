@@ -16,6 +16,7 @@ import { EditarMedicoModule } from './editar-medico/editar-medico.module';
 import { ListarPacientesModule } from './listar-pacientes/listar-pacientes.module';
 import { AgregarPacienteModule } from './agregar-paciente/agregar-paciente.module';
 import { EditarPacienteModule } from './editar-paciente/editar-paciente.module';
+import { ConsultasExternasModule } from './consultas-externas/consultas-externas.module';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { EditarPacienteModule } from './editar-paciente/editar-paciente.module';
     EditarMedicoModule,
     ListarPacientesModule,
     AgregarPacienteModule,
-    EditarPacienteModule
+    EditarPacienteModule,
+    ConsultasExternasModule
   ]
 })
 export class AdministradorModule { }

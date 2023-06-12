@@ -1,0 +1,7 @@
+mat-tab-group {
+    margin: 20px; /* margen exterior */
+  }
+  
+  mat-tab-group mat-tab {
+    padding: 10px; /* margen interior */
+  }
