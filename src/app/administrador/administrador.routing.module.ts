@@ -7,6 +7,9 @@ import { AgregarConsultorioComponent } from './agregar-consultorio/agregar-consu
 import { ListarMedicosComponent } from './listar-medicos/listar-medicos.component';
 import { AgregarMedicoComponent } from './agregar-medico/agregar-medico.component';
 import { EditarMedicoComponent } from './editar-medico/editar-medico.component';
+import { ListarPacientesComponent } from './listar-pacientes/listar-pacientes.component';
+import { AgregarPacienteComponent } from './agregar-paciente/agregar-paciente.component';
+import { EditarPacienteComponent } from './editar-paciente/editar-paciente.component';
 
 const routes: Routes = [
   {
@@ -22,6 +25,10 @@ const routes: Routes = [
       { path: 'listar-medicos', component: ListarMedicosComponent },
       { path: 'agregar-medico', component: AgregarMedicoComponent },
       { path: 'editar-medico', component: EditarMedicoComponent },
+      { path: 'listar-pacientes', component: ListarPacientesComponent },
+      { path: 'agregar-paciente', component: AgregarPacienteComponent },
+      { path: 'editar-paciente', component: EditarPacienteComponent },
+      
     ],
   },
 ];
