@@ -22,13 +22,23 @@ export class ConsultasExternasComponent implements OnInit {
     'nombre_medico',
     'apellido_medico',
   ];
-
-
   dataSource = new MatTableDataSource<Consultorio>();;
   filterValue: string = '';
+
+  data2!: MedicoDisplay[];
+  dataSource2 = new MatTableDataSource<MedicoDisplay>();
+  displayedColumns2: string[] = [
+    'id',
+    'email',
+    'nombre',
+    'apellido',
+    'direccion',
+  ];
+
   constructor(
     private router: Router,
-    private consultorioService: ConsultorioService
+    private consultorioService: ConsultorioService,
+    private medicoService: MedicoService
   ) { }
   ngOnInit(): void {
     this.consultorioService.getAll().subscribe(
@@ -37,6 +47,16 @@ export class ConsultasExternasComponent implements OnInit {
           console.log(res);
           this.data = res;
           this.dataSource = new MatTableDataSource(this.data);
+        },
+      }
+    );
+
+    this.medicoService.getAll().subscribe(
+      {
+        next: async (res) => {
+          this.data2 = res;
+          console.log("data2: ", this.data2);
+          this.dataSource2 = new MatTableDataSource(this.data2);
         },
       }
     );
