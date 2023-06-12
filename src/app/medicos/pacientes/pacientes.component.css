@@ -17,3 +17,13 @@ table.mat-elevation-z8 {
     text-align: center;
     padding: 20px;
   }
+
+  .filter-container {
+    display: flex;
+
+  }
+
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
