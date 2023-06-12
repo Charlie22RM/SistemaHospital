@@ -38,4 +38,7 @@ export class PacientesComponent {
     //this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  editElement(){
+    this.router.navigate(['asd']);
+  }
 }
