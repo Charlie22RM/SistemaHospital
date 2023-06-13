@@ -7,7 +7,7 @@ import { HistorialClinicoComponent } from './historial-clinico/historial-clinico
 const routes: Routes = [
     { path: '', component: MedicosComponent, children: [
         { path: '', component: PacientesComponent },
-        { path: 'historial', component: HistorialClinicoComponent }
+        { path: 'historial/:paciente_id', component: HistorialClinicoComponent }
       ]  
     },
       

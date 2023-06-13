@@ -50,8 +50,10 @@ export class PacientesComponent implements OnInit{
     //this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  editElement(){
-    this.router.navigate(['/medicos/historial']);
+  editElement(paciente: PacienteDisplay){
+    const paciente_id= paciente.id;
+    console.log(paciente_id);
+    this.router.navigate(['/medicos/historial',paciente_id]);
   }
 }
 
