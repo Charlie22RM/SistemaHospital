@@ -51,7 +51,9 @@ export class LoginComponent implements OnInit {
         console.log(res);
         this.valueService.setToken(res.token);
         this.valueService.token = res.token;
-        
+        this.valueService.setId(res.user.id);
+        this.valueService.id=res.user.id;
+        console.log("id del service: ",this.valueService.id)
         this.router.navigate(['/pacientes']);
       },
       error: (err) => {

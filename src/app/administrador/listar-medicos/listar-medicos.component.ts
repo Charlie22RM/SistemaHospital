@@ -14,6 +14,7 @@ export class ListarMedicosComponent implements OnInit{
   displayedColumns: string[] = [
     'id',
     'email',
+    'cedula',
     'nombre',
     'apellido',
     'direccion',
@@ -44,10 +45,20 @@ export class ListarMedicosComponent implements OnInit{
   addConsultorio() {
     this.router.navigate(['administrador/agregar-medico']);
   }
-  editConsultorio(element:any) {
-    this.router.navigate(['administrador/agregar-consultorio']);
+  editMedico(medico: MedicoDisplay) {
+    const medico_id = medico.id;
+    this.router.navigate(['administrador/editar-medico',medico_id]);
   }
-  deleteConsultorio(element:any) {
-    this.router.navigate(['administrador/agregar-consultorio']);
+  deleteMedico(medico:MedicoDisplay) {
+    const medico_id = medico.id;
+    this.medicoService.deleteMedico(medico_id).subscribe(() => {
+      this.medicoService.getAll().subscribe({
+        next: (res) => {
+          console.log(res);
+          this.data = res;
+          this.dataSource = new MatTableDataSource(this.data);
+        },
+      });
+    });
   }
 }

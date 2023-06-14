@@ -47,13 +47,25 @@ export class PacientesComponent implements OnInit{
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
-    //this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
   editElement(paciente: PacienteDisplay){
     const paciente_id= paciente.id;
-    console.log(paciente_id);
     this.router.navigate(['/medicos/historial',paciente_id]);
+  }
+
+  deleteElement(paciente: PacienteDisplay){
+    const paciente_id= paciente.id;
+    this.pacienteService.deletePaciente(paciente_id).subscribe(() => {
+      this.pacienteService.getAll().subscribe({
+        next: (res) => {
+          console.log(res);
+          this.data = res;
+          this.dataSource = new MatTableDataSource(this.data);
+        },
+      });
+    });
   }
 }
 

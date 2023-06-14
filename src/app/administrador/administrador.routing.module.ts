@@ -11,6 +11,7 @@ import { ListarPacientesComponent } from './listar-pacientes/listar-pacientes.co
 import { AgregarPacienteComponent } from './agregar-paciente/agregar-paciente.component';
 import { EditarPacienteComponent } from './editar-paciente/editar-paciente.component';
 import { ConsultasExternasComponent } from './consultas-externas/consultas-externas.component';
+import { PacientesComponent } from '../medicos/pacientes/pacientes.component';
 const routes: Routes = [
   {
     path: '',
@@ -24,8 +25,8 @@ const routes: Routes = [
       { path: 'agregar-consultorio', component: AgregarConsultorioComponent },
       { path: 'listar-medicos', component: ListarMedicosComponent },
       { path: 'agregar-medico', component: AgregarMedicoComponent },
-      { path: 'editar-medico', component: EditarMedicoComponent },
-      { path: 'listar-pacientes', component: ListarPacientesComponent },
+      { path: 'editar-medico/:medico_id', component: EditarMedicoComponent },
+      { path: 'listar-pacientes', component: PacientesComponent },
       { path: 'agregar-paciente', component: AgregarPacienteComponent },
       { path: 'editar-paciente', component: EditarPacienteComponent },
       { path: 'consultas-externas', component: ConsultasExternasComponent },

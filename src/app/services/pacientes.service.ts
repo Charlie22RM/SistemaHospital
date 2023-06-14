@@ -46,4 +46,13 @@ export class PacientesService {
     let options = { headers };
     return lastValueFrom(this.http.put<any>(url,data, options));
   }
+
+  public deletePaciente(paciente_id:number){
+    let url = `${environment.apiUrl}user/${paciente_id}`;
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    let options = { headers };
+    return this.http.delete<any>(url, options);
+  }
 }
