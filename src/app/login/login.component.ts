@@ -48,13 +48,19 @@ export class LoginComponent implements OnInit {
   ingresar(formData: any) {
     this.authService.login(formData).subscribe({
       next: async (res) => {
-        console.log(res);
         this.valueService.setToken(res.token);
         this.valueService.token = res.token;
         this.valueService.setId(res.user.id);
         this.valueService.id=res.user.id;
-        console.log("id del service: ",this.valueService.id)
-        this.router.navigate(['/pacientes']);
+        if(res.user.rol.id ===1){
+          this.router.navigate(['/pacientes']);
+        }
+        if(res.user.rol.id ===2){
+          this.router.navigate(['/medicos']);
+        }
+        if(res.user.rol.id ===3){
+          this.router.navigate(['/administrador']);
+        }
       },
       error: (err) => {
         if (err.error.statusCode === 404) {

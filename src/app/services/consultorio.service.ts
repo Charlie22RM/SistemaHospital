@@ -19,6 +19,16 @@ export class ConsultorioService {
     return this.http.get<any>(url, options);
   }
 
+  public getConsultorios() {
+    let url = `${environment.apiUrl}consultorios`;
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
+    let options = { headers };
+    return lastValueFrom(this.http.get<any>(url, options));
+  }
+
+
   public getOneById(consultorio_id:number):Promise<Consultorio> {
     let url = `${environment.apiUrl}consultorios/${consultorio_id}`;
     let headers = new HttpHeaders({

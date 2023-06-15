@@ -9,6 +9,8 @@ import {
 import { ValueService } from 'src/app/services/value.service';
 import { PacientesService } from 'src/app/services/pacientes.service';
 import { HistorialDisplay } from 'src/app/models/userHistorial';
+import { CitaService } from 'src/app/services/cita.service';
+import { CitaDisplay } from 'src/app/models/cita';
 
 @Component({
   selector: 'app-historial-clinico',
@@ -19,11 +21,13 @@ export class HistorialClinicoComponent implements OnInit{
   enfermedades!: FormGroup;
   private paciente_id: number = 0;
   historial!: HistorialDisplay;
+  data!: CitaDisplay[];
   constructor(
     private router: Router,
     private _formBuilder: FormBuilder,
     private valueService: ValueService,
     private pacienteService: PacientesService,
+    private citaService: CitaService,
   ) {
     this.enfermedades = this._formBuilder.group({
       nombre: [null],
@@ -50,6 +54,9 @@ export class HistorialClinicoComponent implements OnInit{
       cancer_descripcion: [null],
       otros: [false],
       otros_descripcion: [null],
+      especialidad: [null],
+      fecha: [null],
+      hora: [null],
     });
   }
   
@@ -57,7 +64,8 @@ export class HistorialClinicoComponent implements OnInit{
     this.paciente_id = this.valueService.id;
     console.log(this.paciente_id);
     let promise1 = this.getDataPaciente();
-    Promise.all([promise1]);
+    let promise2 = this.getLastCita();
+    Promise.all([promise1,promise2]);
   }
 
   getDataPaciente() {
@@ -100,6 +108,17 @@ export class HistorialClinicoComponent implements OnInit{
     this.enfermedades.get('traumatismo')!.disable();
     this.enfermedades.get('cancer')!.disable();
     this.enfermedades.get('otros')!.disable();
+  }
+
+  getLastCita(){
+    this.citaService.getLastById(this.paciente_id).subscribe({
+      next: async (res) =>{
+        this.data=res;
+        this.enfermedades.get('fecha')!.setValue(res[0].fecha);
+        this.enfermedades.get('hora')!.setValue(res[0].hora);
+        this.enfermedades.get('especialidad')!.setValue(res[0].consultorios[0].especialidad);
+      }
+    })
   }
 
 }
