@@ -61,7 +61,7 @@ export class AgendarCitaComponent implements OnInit {
 
   async ngOnInit() {
     let promise1 = await this.getConsultoriosNames();
-    Promise.all([promise1]);
+
   }
 
   validateSeleccionEspecialidad(control: AbstractControl) {
