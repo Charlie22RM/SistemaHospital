@@ -38,7 +38,7 @@ export class AgregarConsultorioComponent implements OnInit {
   }
   async ngOnInit() {
     let promise1 = await this.getMedicosNames();
-    Promise.all([promise1]);
+
   }
 
   validateSeleccionEspecialidad(control: AbstractControl) {
