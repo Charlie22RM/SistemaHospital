@@ -6,7 +6,6 @@ import {
   Validators,
 } from '@angular/forms';
 import { MatSnackBar, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
-import { ActivatedRoute, Router } from '@angular/router';
 import { OpcionesMedicos } from 'src/app/models/opcionesMedicos';
 import { ConsultorioService } from 'src/app/services/consultorio.service';
 import { MedicoService } from 'src/app/services/medico.service';

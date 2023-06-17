@@ -9,7 +9,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
 
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -19,7 +18,6 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSliderModule} from '@angular/material/slider';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';

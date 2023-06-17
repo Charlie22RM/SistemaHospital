@@ -3,8 +3,6 @@ import { Router } from '@angular/router';
 import {
   FormBuilder,
   FormGroup,
-  FormControl,
-  Validators,
 } from '@angular/forms';
 import { ValueService } from 'src/app/services/value.service';
 import { PacientesService } from 'src/app/services/pacientes.service';
