@@ -62,7 +62,6 @@ export class HistorialClinicoComponent implements OnInit {
   async ngOnInit() {
     this.paciente_id = this.activatedRoute.snapshot.params['paciente_id'];
     let promise1 = this.getDataPaciente();
-    Promise.all([promise1]);
   }
 
   getDataPaciente() {
