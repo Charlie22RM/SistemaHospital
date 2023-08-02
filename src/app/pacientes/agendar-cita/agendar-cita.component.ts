@@ -6,10 +6,6 @@ import {
   FormsModule,
   Validators,
 } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { NgFor } from '@angular/common';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { ConsultorioService } from 'src/app/services/consultorio.service';
 import { opcionesConsultorios } from 'src/app/models/opcionesConsultorios';
 import {
@@ -61,7 +57,7 @@ export class AgendarCitaComponent implements OnInit {
 
   async ngOnInit() {
     let promise1 = await this.getConsultoriosNames();
-    Promise.all([promise1]);
+
   }
 
   validateSeleccionEspecialidad(control: AbstractControl) {

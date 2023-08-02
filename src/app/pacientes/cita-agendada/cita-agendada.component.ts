@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { DatePipe } from '@angular/common';
 import { CitaService } from 'src/app/services/cita.service';
 import { Router } from '@angular/router';
 import { ValueService } from 'src/app/services/value.service';
-import { Cita, CitaDisplay } from 'src/app/models/cita';
+import { CitaDisplay } from 'src/app/models/cita';
 import { MatTableDataSource } from '@angular/material/table';
 
 export interface CitaAgendada {

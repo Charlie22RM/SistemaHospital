@@ -3,12 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import {
   FormBuilder,
   FormGroup,
-  FormsModule,
-  ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { JsonPipe } from '@angular/common';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { PacientesService } from 'src/app/services/pacientes.service';
 import { HistorialDisplay } from 'src/app/models/userHistorial';
 import { MatSnackBar, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';

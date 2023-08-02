@@ -39,7 +39,7 @@ export class EditarMedicoComponent implements OnInit {
     this.medico_id = this.activatedRoute.snapshot.params['medico_id'];
     let promise1 = await this.getMedico(this.medico_id);
 
-    Promise.all([promise1]);
+
   }
 
 
