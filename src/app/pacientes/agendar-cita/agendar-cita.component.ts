@@ -105,14 +105,13 @@ export class AgendarCitaComponent implements OnInit {
   }
 
   addCita(formData: any) {
-    const fechaFormateada = format(formData.fecha, 'dd/MM/yyyy');
+    const fechaFormateada = format(formData.fecha, 'yyyy-MM-dd');
     const data :Cita ={
       userId: this.valueService.id,
       consultorioId: formData.especialidad,
       fecha:fechaFormateada,
       hora: formData.hora
     };
-    console.log("data: ",data);
     this.citaService.createCita(data).subscribe({
       next: async (res) => {
         console.log(res);
@@ -120,6 +119,10 @@ export class AgendarCitaComponent implements OnInit {
       },
       error: (err) => {
         if (err.error.statusCode === 409) {
+          err.error.message;
+          this.openSnackBar(err.error.message);
+        }
+        if (err.error.statusCode === 400) {
           err.error.message;
           this.openSnackBar(err.error.message);
         }
